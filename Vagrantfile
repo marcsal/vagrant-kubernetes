@@ -18,7 +18,12 @@ Vagrant.configure("2") do |config|
       path:"tools/provision.sh"
     config.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "/workspace/ansible/ansiblepb/role-cl-k8s.yml"
+      ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
+      ansible.extra_vars = {
+        "user" =>"marcos",
+        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "sshroot" => "False",
+      }
     end
   end
   config.vm.define :mark8swrk01 do |mark8swrk01|
@@ -37,7 +42,12 @@ Vagrant.configure("2") do |config|
       path:"tools/provision.sh"
     config.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "/workspace/ansible/ansiblepb/role-cl-k8s.yml"
+      ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
+      ansible.extra_vars = {
+        "user" =>"marcos",
+        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "sshroot" => "False",
+      }
     end
   end
   config.vm.define :mark8swrk02 do |mark8swrk02|
@@ -56,7 +66,12 @@ Vagrant.configure("2") do |config|
       path:"tools/provision.sh"
     config.vm.provision "ansible" do |ansible|
       ansible.verbose = "v"
-      ansible.playbook = "/workspace/ansible/ansiblepb/role-cl-k8s.yml"
+      ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
+      ansible.extra_vars = {
+        "user" =>"marcos",
+        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "sshroot" => "False",
+      }
     end
   end
 end
