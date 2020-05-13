@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
     config.ssh.username = "vagrant"
     config.ssh.insert_key = false
-    config.ssh.private_key_path = ["/home/marcos/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
+    config.ssh.private_key_path = ["/home/marcsal/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
     mark8smtp01.vm.hostname = "mark8smtp01"
     mark8smtp01.vm.network :private_network, ip: "192.168.205.10"
     # mark8smtp01.vm.network :public_network, ip: "192.168.1.10", bridge: "wlo1"
@@ -20,8 +20,8 @@ Vagrant.configure("2") do |config|
       ansible.verbose = "v"
       ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
       ansible.extra_vars = {
-        "user" =>"marcos",
-        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "user" =>"marcsal",
+        "sshkey" => "/home/marcsal/.ssh/id_rsa.pub",
         "sshroot" => "False",
       }
     end
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
     config.ssh.username = "vagrant"
     config.ssh.insert_key = false
-    config.ssh.private_key_path = ["/home/marcos/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
+    config.ssh.private_key_path = ["/home/marcsal/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
     mark8swrk01.vm.hostname = "mark8swrk01"
     mark8swrk01.vm.network :private_network, ip: "192.168.205.11"
     # mark8swrk01.vm.network :public_network, ip: "192.168.1.103", bridge: "wlo1"
@@ -44,8 +44,8 @@ Vagrant.configure("2") do |config|
       ansible.verbose = "v"
       ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
       ansible.extra_vars = {
-        "user" =>"marcos",
-        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "user" =>"marcsal",
+        "sshkey" => "/home/marcsal/.ssh/id_rsa.pub",
         "sshroot" => "False",
       }
     end
@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
     config.ssh.username = "vagrant"
     config.ssh.insert_key = false
-    config.ssh.private_key_path = ["/home/marcos/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
+    config.ssh.private_key_path = ["/home/marcsal/.ssh/vagrant_rsa", "~/.vagrant.d/insecure_private_key"]
     mark8swrk02.vm.hostname = "mark8swrk02"
     mark8swrk02.vm.network :private_network, ip: "192.168.205.12"
     # mark8swrk02.vm.network :public_network, ip: "192.168.1.12", bridge: "wlo1"
@@ -68,8 +68,8 @@ Vagrant.configure("2") do |config|
       ansible.verbose = "v"
       ansible.playbook = "/workspace/git/ansible/playbooks/role-base.yml"
       ansible.extra_vars = {
-        "user" =>"marcos",
-        "sshkey" => "/home/marcos/.ssh/id_rsa.pub",
+        "user" =>"marcsal",
+        "sshkey" => "/home/marcsal/.ssh/id_rsa.pub",
         "sshroot" => "False",
       }
     end
